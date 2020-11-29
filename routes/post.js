@@ -49,7 +49,7 @@ router.delete('/del/:Id', async (req,res)=>{
 });
 
 //Update
-router.put('/up/:Id', async (res, req)=>{
+router.patch('/up/:Id', async (res, req)=>{
     try {
         const updatePost = await Post.updateOne(
             {_id: req.params.Id},
