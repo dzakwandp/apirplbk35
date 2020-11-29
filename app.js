@@ -24,9 +24,14 @@ app.get('/',  (req, res)=>{
 
 
 //Connect DB
-mongoose.connect(process.env.DB_CONN, { useNewUrlParser: true }, ()=> console.log('connected'));
+mongoose.connect(process.env.DB_CONN, { useNewUrlParser: true, 
+    useCreateIndex: true, 
+    useUnifiedTopology: true, 
+    useFindAndModify: false }, ()=> console.log('connected'));
 
-//listen to server 
-var server = app.listen(process.env.PORT || 8080, function () {
-    var port = server.address().port;
-  });
+//listen to server
+app.listen(3000)
+
+// var server = app.listen(process.env.PORT || 8080, function () {
+//     var port = server.address().port;
+//   });
