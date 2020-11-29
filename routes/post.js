@@ -57,7 +57,7 @@ router.put('/up/:Id', async (res, req)=>{
         );
         res.json(updatePost);
     } catch (err) {
-        console.log({message:err})
+        res.json({message:err})
     }
 })
 
