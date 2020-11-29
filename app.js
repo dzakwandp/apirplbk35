@@ -24,4 +24,6 @@ app.get('/',  (req, res)=>{
 mongoose.connect(process.env.DB_CONN, { useNewUrlParser: true }, ()=> console.log('connected'));
 
 //listen to server 
-app.listen(3000);
+var server = app.listen(process.env.PORT || 8080, function () {
+    var port = server.address().port;
+  });
