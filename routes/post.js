@@ -26,7 +26,7 @@ router.get('/n/:name', async (req,res)=>{
 //Get by Merk
 router.get('/m/:merk', async (req,res)=>{
     try {
-        const src = await Post.find({nama: req.params.name});
+        const src = await Post.find({merk: req.params.merk});
         res.json(src);
     } catch (err) {
         res.json({message:err});
