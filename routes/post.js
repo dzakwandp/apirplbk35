@@ -13,6 +13,16 @@ router.get('/', async (req, res)=>{
     }
 });
 
+//Get by Name
+router.get('/:name', async (req,res)=>{
+    try {
+        const src = await Post.find({nama: req.params.name});
+        res.json(src);
+    } catch (err) {
+        res.json({message:err});
+    }
+})
+
 //Submit
 router.post('/post', async(req, res)=>{
     const post = new Post({
