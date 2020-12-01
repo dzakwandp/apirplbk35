@@ -19,6 +19,12 @@ app.use('/data', postRoute);
 //Routes
 app.get('/',  (req, res)=>{
     res.send('Yeay!!');
+    res.send('');
+    res.send('How To use:');
+    res.send('https://api12sbkkel9.herokuapp.com/data/ include this for get all');
+    res.send('/n/ = Search by Name (Case Sensitive)');
+    res.send('/m/ = Search by Merk (Case Sensitive)');
+    res.send('/post = To add some data');
 })
 
 

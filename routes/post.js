@@ -14,7 +14,17 @@ router.get('/', async (req, res)=>{
 });
 
 //Get by Name
-router.get('/:name', async (req,res)=>{
+router.get('/n/:name', async (req,res)=>{
+    try {
+        const src = await Post.find({nama: req.params.name});
+        res.json(src);
+    } catch (err) {
+        res.json({message:err});
+    }
+})
+
+//Get by Merk
+router.get('/m/:merk', async (req,res)=>{
     try {
         const src = await Post.find({nama: req.params.name});
         res.json(src);
