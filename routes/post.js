@@ -1,7 +1,7 @@
 const { response } = require('express');
 const express = require('express');
 const router = express.Router();
-const Post = require('../models/Mobil');
+const Post = require('../models/WishList');
 
 //Getall
 router.get('/', async (req, res)=>{
@@ -23,10 +23,10 @@ router.get('/n/:name', async (req,res)=>{
     }
 })
 
-//Get by Merk
-router.get('/m/:merk', async (req,res)=>{
+//Get by Publisher
+router.get('/m/:publish', async (req,res)=>{
     try {
-        const src = await Post.find({merk: req.params.merk});
+        const src = await Post.find({merk: req.params.publish});
         res.json(src);
     } catch (err) {
         res.json({message:err});
@@ -37,7 +37,7 @@ router.get('/m/:merk', async (req,res)=>{
 router.post('/post', async(req, res)=>{
     const post = new Post({
         nama: req.body.nama,
-        merk: req.body.merk,
+        publish: req.body.publish,
         tahun: req.body.tahun
     });
     try{

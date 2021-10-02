@@ -1,12 +1,12 @@
 {
-  "name": "car_api",
+  "name": "game_api",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js"
   },
-  "author": "Yusuf Valent",
+  "author": "Dzakwan Diego",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",

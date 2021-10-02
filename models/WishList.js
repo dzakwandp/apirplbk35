@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
-const mobilSchema = new mongoose.Schema({
+const gameSchema = new mongoose.Schema({
     nama: {
         type: String,
         required: true
     },
-    merk: {
+    publish: {
         type: String,
         required: true
     },
@@ -15,4 +15,4 @@ const mobilSchema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('Mobil', mobilSchema);
+module.exports = mongoose.model('WishList', gameSchema);
