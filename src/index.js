@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Tekkom from './tekkom';
+import Mount from './Mount';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Tekkom />
+    <Mount />
   </React.StrictMode>,
   document.getElementById('root')
 );
