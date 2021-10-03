@@ -14,7 +14,8 @@ class A extends Component {
       super(props);
       this.state = {
          header: "TUGAS AKHIR PRAKTIKUM RPLBK",
-         isi: "KELOMPOK 35"
+         isi: "KELOMPOK 35",
+         judul: "#BukanMaen Wishlist Game"
       }
    }
    componentDidMount() {
@@ -27,6 +28,7 @@ class A extends Component {
                <div>
                <Name>{this.state.header}</Name>
                <Name>{this.state.isi}</Name>
+               <Name>{this.state.judul}</Name>
                </div>
             </header>
 
