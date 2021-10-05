@@ -163,6 +163,7 @@ export default class tekkom extends Component {
             <br />
         </div>
         </Modal>
+        <div style={{display:'flex',flexDirection:'row', width:'100%'}}>
         {this.state.tekkom.map((results, index) => {
         return (
         <div className="card" key={results.nama} >
@@ -183,6 +184,7 @@ export default class tekkom extends Component {
         </div>
         );
         })}
+        </div>
         </div>
         </div>
         );
